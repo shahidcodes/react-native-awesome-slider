@@ -398,11 +398,11 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
       translateX = thumbValue.value + thumbWidth / 2;
     }
     return {
-      opacity: bubbleOpacity.value,
+      // opacity: bubbleOpacity.value,
       transform: [
-        {
-          translateY: bubbleTranslateY,
-        },
+        // {
+        //   translateY: bubbleTranslateY,
+        // },
         {
           translateX:
             snappingEnabled && stepTimingOptions
@@ -420,9 +420,9 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
                   width.value - bubbleWidth / 2,
                 ),
         },
-        {
-          scale: bubbleOpacity.value,
-        },
+        // {
+        //   scale: bubbleOpacity.value,
+        // },
       ],
     };
   });
@@ -868,8 +868,10 @@ export const Slider: FC<AwesomeSliderProps> = memo(function Slider({
           style={[
             styles.bubble,
             {
+              // backgroundColor:"red",
               left: -bubbleMaxWidth / 2,
               width: bubbleMaxWidth,
+              bottom:-30
             },
             animatedBubbleStyle,
           ]}
